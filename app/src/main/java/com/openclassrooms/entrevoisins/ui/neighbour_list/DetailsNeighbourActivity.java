@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.model.Neighbour;
@@ -21,6 +24,10 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
     Neighbour neighbour;
     @BindView(R.id.neighbour_name_subtitle)
     TextView mNeighbourName;
+    @BindView(R.id.address_text)
+    TextView mNeighbourAddress;
+    @BindView(R.id.neighbour_image)
+    ImageView mNeighbourAvatar;
 
 
     @Override
@@ -42,5 +49,10 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
 
     public void initView() {
         mNeighbourName.setText(neighbour.getName());
+        mNeighbourAddress.setText(neighbour.getAddress());
+        Glide.with(mNeighbourAvatar.getContext())
+                .load(neighbour.getAvatarUrl())
+                .into(mNeighbourAvatar);
+
     }
 }
