@@ -1,6 +1,7 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,16 +19,23 @@ import org.w3c.dom.Text;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class DetailsNeighbourActivity extends AppCompatActivity {
     private NeighbourApiService mApiService;
     Neighbour neighbour;
     @BindView(R.id.neighbour_name_subtitle)
     TextView mNeighbourName;
-    @BindView(R.id.address_text)
+    @BindView(R.id.item_address_text)
     TextView mNeighbourAddress;
     @BindView(R.id.neighbour_image)
     ImageView mNeighbourAvatar;
+    @BindView(R.id.item_phone_text)
+    TextView mNeighbourPhone;
+    @BindView(R.id.item_link_text)
+    TextView mNeighbourLink;
+    @BindView(R.id.floatingActionButton)
+    FloatingActionButton isFavoriteFab;
 
 
     @Override
@@ -53,6 +61,36 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
         Glide.with(mNeighbourAvatar.getContext())
                 .load(neighbour.getAvatarUrl())
                 .into(mNeighbourAvatar);
+        mNeighbourPhone.setText(neighbour.getPhoneNumber());
+        mNeighbourLink.setText(neighbour.getAvatarUrl());
+        updateFabImage();
 
+    }
+
+    private void updateFabImage() {
+        if (neighbour.isFavorite()) {
+            isFavoriteFab.setImageResource(R.drawable.ic_star_white_24dp);
+        } else {
+            isFavoriteFab.setImageResource(R.drawable.ic_star_border_white_24dp);
+        }
+    }
+
+
+    @OnClick(R.id.floatingActionButton)
+    void updateFavorite() {
+        neighbour.setFavorite(!neighbour.isFavorite());
+        updateFabImage();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        onItemButtonReturnClicked();
+    }
+
+    @OnClick(R.id.item_button_return)
+    void onItemButtonReturnClicked() {
+        mApiService.updateFabNeighbour(neighbour);
+        finish();
     }
 }

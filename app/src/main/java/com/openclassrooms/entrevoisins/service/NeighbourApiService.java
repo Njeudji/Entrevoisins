@@ -27,4 +27,16 @@ public interface NeighbourApiService {
      * @param neighbour
      */
     void createNeighbour(Neighbour neighbour);
+
+    void updateFabNeighbour(Neighbour neighbour);
+
+    List<Neighbour> filterNeighbours();
+
+
+
+    // methode pour filtrer pour avoir uniquement les voisins favoris
+    // retourner une liste
+    // pas de paramètre
+
+
 }

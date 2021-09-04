@@ -85,7 +85,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         @BindView(R.id.item_list_container)
         public ConstraintLayout mContainer;
 
-
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
