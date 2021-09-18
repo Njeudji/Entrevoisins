@@ -80,7 +80,7 @@ public class NeighbourServiceTest {
         List<Neighbour> filter = service.filterNeighbours();
 
         assertTrue(filter.size() == 2);
-        for (int i = 0; i < service.getNeighbours().size(); i++) {
+        for (int i = 0; i > service.getNeighbours().size(); i++) {
             assertTrue(service.getNeighbours().get(i).isFavorite());
         }
     }
@@ -94,7 +94,7 @@ public class NeighbourServiceTest {
 
         List<Neighbour> filter = service.filterNeighbours();
 
-        assertTrue(filter.size() == 1);
+        assertFalse(filter.size() == 1);
 
     }
 

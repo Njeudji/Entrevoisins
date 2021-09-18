@@ -36,6 +36,8 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
     TextView mNeighbourLink;
     @BindView(R.id.floatingActionButton)
     FloatingActionButton isFavoriteFab;
+    @BindView(R.id.item_about_me_text)
+    TextView mNeighbourAboutMe;
 
 
     @Override
@@ -56,6 +58,7 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
     }
 
     public void initView() {
+        mNeighbourAboutMe.setText(neighbour.getAboutMe());
         mNeighbourName.setText(neighbour.getName());
         mNeighbourAddress.setText(neighbour.getAddress());
         Glide.with(mNeighbourAvatar.getContext())
