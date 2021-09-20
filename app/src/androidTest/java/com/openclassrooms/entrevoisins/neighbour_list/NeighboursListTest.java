@@ -79,6 +79,10 @@ public class NeighboursListTest {
                 check(withItemCount(ITEMS_COUNT - 1));
     }
 
+
+    /**
+     * When we click an item, the item show the details of the neighbour
+     */
     @Test
     public void myNeighbourList_clickListElement_shouldOpenNeighboursDetailsActivity() {
         onView(allOf(withId(R.id.list_neighbours), hasFocus()))
@@ -87,6 +91,10 @@ public class NeighboursListTest {
         onView(withId(R.id.neighbour_name_subtitle)).check(matches(isDisplayed()));
     }
 
+
+    /**
+     * When we click on Fab TabLayout, we must see the neighbour fab
+     */
     @Test
     public void myNeighbourFabList_ShouldShowOnlyNeighbourFab() {
         onView(withText(R.string.tab_favorites_title)).perform(click());
@@ -96,6 +104,10 @@ public class NeighboursListTest {
 
     }
 
+
+    /**
+     * When we click on the fab button, we must see the fab neighbour in the fab TabLayout
+     */
     @Test
     public void myFloatingActionButton_ShouldShowFabNeighbour(){
         onView(allOf(withId(R.id.list_neighbours), hasFocus()))

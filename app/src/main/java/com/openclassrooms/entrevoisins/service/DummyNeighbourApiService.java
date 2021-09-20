@@ -39,6 +39,11 @@ public class DummyNeighbourApiService implements NeighbourApiService {
         neighbours.add(neighbour);
     }
 
+
+    /**
+     * Update Favorite Neighbour
+     * @param neighbour
+     */
     @Override
     public void updateFabNeighbour(Neighbour neighbour) {
         for (int i = 0; i < neighbours.size(); i++) {
@@ -50,6 +55,10 @@ public class DummyNeighbourApiService implements NeighbourApiService {
         }
     }
 
+    /**
+     * Filter for Fab Neighbour
+     * @return
+     */
     @Override
     public List<Neighbour> filterNeighbours() {
         List<Neighbour> fabNeighbours = new ArrayList<>();
