@@ -70,11 +70,4 @@ public class DummyNeighbourApiService implements NeighbourApiService {
         }
         return fabNeighbours;
     }
-
-
-// creer la nouvelle liste
-    // parcourir la liste
-    // check de si le voisin est favoris
-    // si il est favoris /ajouter dans une nouvelle liste
-    //retourner la nouvelle liste
 }

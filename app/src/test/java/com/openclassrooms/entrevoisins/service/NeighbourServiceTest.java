@@ -53,8 +53,6 @@ public class NeighbourServiceTest {
         service.updateFabNeighbour(caroline);
 
         assertTrue(service.getNeighbours().get(0).isFavorite());
-
-
     }
 
     @Test
@@ -83,6 +81,8 @@ public class NeighbourServiceTest {
         for (int i = 0; i > service.getNeighbours().size(); i++) {
             assertTrue(service.getNeighbours().get(i).isFavorite());
         }
+        service.getNeighbours().get(0).setFavorite(false);
+        service.getNeighbours().get(1).setFavorite(false);
     }
 
     @Test
