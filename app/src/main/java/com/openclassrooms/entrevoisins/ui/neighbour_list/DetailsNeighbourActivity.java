@@ -38,6 +38,8 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
     FloatingActionButton isFavoriteFab;
     @BindView(R.id.item_about_me_text)
     TextView mNeighbourAboutMe;
+    @BindView(R.id.neighbour_name_subtitle2)
+    TextView mNeighbourName2;
 
 
     @Override
@@ -67,6 +69,7 @@ public class DetailsNeighbourActivity extends AppCompatActivity {
         mNeighbourPhone.setText(neighbour.getPhoneNumber());
         mNeighbourLink.setText(neighbour.getAvatarUrl());
         updateFabImage();
+        mNeighbourName2.setText(neighbour.getName());
 
     }
 

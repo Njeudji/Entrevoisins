@@ -8,6 +8,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable-anydpi/ic_add_location.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable-anydpi/ic_link.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable-anydpi/ic_phone.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_account.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_delete_white_24dp.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_launcher_background.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_person_add_white_24dp.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_star_border_white_24dp.xml" value="0.5703125" />
+        <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/drawable/ic_star_white_24dp.xml" value="0.5703125" />
         <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/layout/activity_add_neighbour.xml" value="0.458786231884058" />
         <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/layout/activity_details_neighbour.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/nkema/Desktop/PROJET/PROJET_3/Entrevoisins/app/src/main/res/layout/activity_list_neighbour.xml" value="0.5541666666666667" />
